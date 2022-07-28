@@ -23,6 +23,7 @@
     <div class="char">
         <div class="blak off"></div>
         <img class="me" src="assets/images/ME.png" alt="">
+        <img class="mylogo" width="200px" src="assets/images/mylogo.png" alt="">
 
     </div>
     <div class="content">
@@ -88,6 +89,7 @@
     </div>
 </body>
 <script>
+    //window.scrollTo(0,0);
     $(".back").addClass("off");
     var width = window.screen.width;
     var height = window.screen.height;
@@ -111,6 +113,7 @@
     var inter = setInterval((e) => {
         time += 1
         $(".lbar").css({ width: time + "%" })
+        //$("body").css({height:"100vh",overflow:"hidden"})
         if (time > 100) {
             clearInterval(inter);
             $(".loading").addClass("off");

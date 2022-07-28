@@ -34,6 +34,7 @@
                 <button class="btn mnitm" ctn="aboutme">About Me</button>
                 <button class="btn mnitm" ctn="skill">Skills</button>
                 <button class="btn mnitm" ctn="myproject">My Projects</button>
+                <button class="btn mnitm" ctn="contact">Contanct</button>
             </div>
             <p class="ctn off aboutme">
                 I am a programmer I have studied programming since I was in high school, programming is my passion, I
@@ -78,6 +79,9 @@
             <div class="ctn off myproject">
                 my pro
             </div>
+            <div class="ctn off contact">
+                my contact
+            </div>
         </div>
         <button class="btn back off" onclick="back()">Back</button>
 
@@ -90,11 +94,11 @@
 </body>
 <script>
     //window.scrollTo(0,0);
+
     $(".back").addClass("off");
     var width = window.screen.width;
     var height = window.screen.height;
-
-
+    
     function back() {
         $(".ctn").addClass("off");
         $(".menu").removeClass("off");

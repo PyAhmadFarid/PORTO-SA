@@ -239,3 +239,48 @@ p{
     background: white;
     height: 10px;
 }
+
+
+@media only screen and (max-width:768px){
+
+    .bg{
+        top:0;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        overflow: hidden;
+
+    }
+    .char{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+    }
+    .me{
+        left: 0;
+        right: 0;
+        position: absolute;
+        right: 100%;
+        width: 100%;
+        bottom: -100px;
+    }
+    .content{
+        top:100vh;
+        padding-top: 100px;
+        padding-left: 30px;
+        background: black;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        height: 100vh;
+        z-index: 100;
+        left: 0;
+        bottom: 0;
+    }
+    .blak{
+        display: none;
+    }
+
+}

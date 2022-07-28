@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Ahmad Farid</title>
@@ -37,7 +38,7 @@
                 <button class="btn mnitm" ctn="contact">Contanct</button>
             </div>
             <p class="ctn off aboutme">
-                 Hi, I'm Farid. Nice to meet you.<br/>
+                Hi, I'm Farid. Nice to meet you.<br />
                 I'm make web application, I use laravel and RectJs
             </p>
             <div class="ctn off skill">
@@ -77,7 +78,13 @@
                 my pro
             </div>
             <div class="ctn off contact">
-                my contact
+                <div class="skillitem">
+                    <div class="skillttl">Phone Number<br>(+62)82199366833</div>
+                </div>
+                <br/>
+                <div class="skillitem">
+                    <div class="skillttl">Email<br>ahmadfarid.gresik@gmail.com</div>
+                </div>
             </div>
         </div>
         <button class="btn back off" onclick="back()">Back</button>
@@ -95,7 +102,7 @@
     $(".back").addClass("off");
     var width = window.screen.width;
     var height = window.screen.height;
-    
+
     function back() {
         $(".ctn").addClass("off");
         $(".menu").removeClass("off");

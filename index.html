@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loadingcontent">
+            <img src="assets/images/logo.png" width="100" alt="">
+            <div class="bglbar">
+                <div class="lbar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="char">
+        <div class="blak off"></div>
+        <img class="me" src="assets/images/ME.png" alt="">
+
+    </div>
+    <div class="content">
+        <div class="Title">Portofolio</div>
+        <div class="isi">
+            <div class="menu ctn">
+                <!-- <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo ipsum corporis inventore accusantium at molestias natus officia quibusdam sunt culpa. Perspiciatis aliquid est totam aspernatur molestias quidem optio exercitationem ut.</p> -->
+                <button class="btn mnitm" ctn="aboutme">About Me</button>
+                <button class="btn mnitm" ctn="skill">Skills</button>
+                <button class="btn mnitm" ctn="myproject">My Projects</button>
+            </div>
+            <p class="ctn off aboutme">
+                I am a programmer I have studied programming since I was in high school, programming is my passion, I
+                like
+                challenges and new things, I also always try the latest technology in programming, since high school I
+                have developed
+                a lot of apps from web apps, mobile apps and even games.
+            </p>
+            <div class="ctn off skill">
+                <div class="skillitem">
+                    <div class="skillttl">Laravel</div>
+                    <div class="skilltbar">
+                        <div class="skillbarfull" style="width: 80% ;"></div>
+                    </div>
+                </div>
+                <div class="skillitem">
+                    <div class="skillttl">React Js</div>
+                    <div class="skilltbar">
+                        <div class="skillbarfull" style="width: 65% ;"></div>
+                    </div>
+                </div>
+                <div class="skillitem">
+                    <div class="skillttl">Js</div>
+                    <div class="skilltbar">
+                        <div class="skillbarfull" style="width: 70% ;"></div>
+                    </div>
+                </div>
+                <div class="skillitem">
+                    <div class="skillttl">MySql</div>
+                    <div class="skilltbar">
+                        <div class="skillbarfull" style="width: 80% ;"></div>
+                    </div>
+                </div>
+                <div class="skillitem">
+                    <div class="skillttl">Python</div>
+                    <div class="skilltbar">
+                        <div class="skillbarfull" style="width: 85% ;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <button class="btn back off" onclick="back()">Back</button>
+
+    </div>
+    </div>
+    <div class="bg">
+        <img class="bg2" src="assets/images/BG/2.png" alt="">
+        <img class="bg1" src="assets/images/BG/1.png" alt="">
+    </div>
+</body>
+<script>
+    $(".back").addClass("off");
+    var width = window.screen.width;
+    var height = window.screen.height;
+
+
+    function back() {
+        $(".ctn").addClass("off");
+        $(".menu").removeClass("off");
+        $(".back").addClass("off");
+        $(".Title").html("Portofolio")
+    }
+    $(".mnitm").on("click", function () {
+        $(".ctn").addClass("off");
+        let atr = $(this).attr("ctn");
+        $("." + atr).removeClass("off");
+        $(".back").removeClass("off");
+        $(".Title").html($(this).html());
+        console.log();
+    })
+    var time = 0;
+    var inter = setInterval((e) => {
+        time += 1
+        $(".lbar").css({ width: time + "%" })
+        if (time > 100) {
+            clearInterval(inter);
+            $(".loading").addClass("off");
+            //$(".me").removeClass("off");
+            $(".blak").removeClass("off");
+
+            setTimeout(() => {
+                document.onmousemove = msmov;
+            }, 10);
+
+        }
+    }, 2);
+
+
+
+    function msmov(e) {
+        let x = (width / 2) - (e.x ?? 0);
+        let y = (height / 2) - (e.y ?? 0);
+        $(".me").css({ "transform": 'translate(' + x / 100 + 'px,' + y / 100 + 'px)' });
+        $(".bg1").css({ "transform": 'translate(' + x / 120 + 'px,' + y / 120 + 'px)' });
+        $(".bg2").css({ "transform": 'translate(' + x / 200 + 'px,' + y / 200 + 'px)' });
+        console.log([x, y])
+
+    }
+
+</script>
+
+</html>

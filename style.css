@@ -14,6 +14,13 @@
 body{
     margin: 0;
     font-family: Aharoni;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 .bg{
     position: fixed;
@@ -244,12 +251,17 @@ p{
 @media only screen and (max-width:768px){
 
     .bg{
-        top:0;
+        /* top:0; */
         width: 100%;
         position: absolute;
         overflow: hidden;
         overflow: hidden;
+        /* bottom: 5px; */
 
+    }
+    .bg > img{
+        /* position: absolute; */
+        margin-bottom: 80px;
     }
     .char{
         position: absolute;
@@ -271,6 +283,7 @@ p{
         padding-top: 100px;
         padding-left: 30px;
         padding-right: 30px;
+        padding-bottom: 30px;
         background: black;
         position: absolute;
         width: 100%;
@@ -286,12 +299,13 @@ p{
         padding-right: 30px;
     }
     .blak{
-        transform: skew(0);
+        transform: none;
         background: rgb(0,0,0);
-        width: 100vh;
+        width: 200%;
         height: 40px;
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,212,255,0) 100%);
         bottom: 0;
+        opacity: 1;
         z-index: 2;
     }
     .skillttl{

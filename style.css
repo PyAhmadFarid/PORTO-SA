@@ -282,7 +282,10 @@ p{
         position: absolute;
         right: 100%;
         width: 100%;
-        bottom: -80px;
+        bottom: -10px;
+    }
+    .mylogo{
+        z-index: 20;
     }
     .content{
         top:100vh;
@@ -305,12 +308,14 @@ p{
         padding-right: 30px;
     }
     .blak{
-        transform: none;
+        transform: skewY(10deg);
+
+        /* transform: none; */
         background: rgb(0,0,0);
         width: 200%;
-        height: 40px;
+        height: 200px;
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,212,255,0) 100%);
-        bottom: 0;
+        bottom: -50px;
         opacity: 1;
         z-index: 2;
     }

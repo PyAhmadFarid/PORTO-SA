@@ -264,7 +264,7 @@ p{
         position: absolute;
         right: 100%;
         width: 100%;
-        bottom: -100px;
+        bottom: -80px;
     }
     .content{
         top:100vh;
@@ -279,12 +279,26 @@ p{
         z-index: 100;
         left: 0;
         bottom: 0;
+        height: 100vh;
+        overflow: auto;
     }
     p{
         padding-right: 30px;
     }
     .blak{
-        display: none;
+        transform: skew(0);
+        background: rgb(0,0,0);
+        width: 100vh;
+        height: 40px;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,212,255,0) 100%);
+        bottom: 0;
+        z-index: 2;
+    }
+    .skillttl{
+        flex: 2;
+    }
+    .skilltbar{
+        flex: 1;
     }
 
 }

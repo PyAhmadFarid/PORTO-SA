@@ -229,6 +229,9 @@ p{
 .skill{
     width: 80%;
 }
+.contact{
+    width: 80%;
+}
 .skillitem{
     display: flex;
     justify-content: space-between;

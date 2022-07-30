@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div class="cheat">
+        Cheat Activated
+    </div>
     <div class="loading">
         <div class="loadingcontent">
             <img src="assets/images/logo.png" width="100" alt="">
@@ -132,6 +135,34 @@
         <img class="bg1" src="assets/images/BG/1.png" alt="">
     </div>
 </body>
+<script>
+
+    var keylog = '';
+    const cheaytcode = 'hesoyam';
+    document.onkeypress =(e)=>{
+        
+        if(keylog.length < 10){
+            keylog+=e.key;
+        }
+        else{
+            keylog = keylog.substring(1);
+            keylog+=e.key;
+        }
+
+        let cheat = keylog.substr(keylog.length-cheaytcode.length).toLowerCase();
+        if(cheat === cheaytcode){
+            //alert("chead actifated");
+            let a = new Audio("assets/cheat.mp3");
+            a.play();
+            $(".cheat").show();
+            setTimeout(()=>{
+                $(".cheat").hide();
+            },2000);
+        }
+        //console.log(cheat);
+
+    };
+</script>
 <script>
     var splide = new Splide( '.splide' ,{
         perPage:2,

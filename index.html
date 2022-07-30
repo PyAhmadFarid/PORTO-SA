@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="icon" href="icon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <title>Ahmad Farid</title>
 </head>
 
@@ -75,14 +77,46 @@
 
             </div>
             <div class="ctn off myproject">
-                my pro
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide">
+                                <div class="projectitem">
+                                    <img src="assets/images/projectbg/1.jpg" alt="">
+                                    <div class="projectitemcontent">
+                                        <span>Mobile Apps</span>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="projectitem">
+                                    <img src="assets/images/projectbg/2.jpg" alt="">
+                                    <div class="projectitemcontent">
+                                        <span>Web Apps</span>
+                                        <p> adipisicing elit. Modi magnam blanditiis voluptatibus, repellat dolores quibusdam ad</p>
+                                    </div>
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="projectitem">
+                                    <img src="assets/images/projectbg/3.jpg" alt="">
+                                    <div class="projectitemcontent">
+                                        <span>Laravel</span>
+                                        <p>tibus, repellat dolores quibusdam ad</p>
+                                    </div>
+                                </div>
+                              </li>
+                          </ul>
+                    </div>
+                  </section>
             </div>
             <div class="ctn off contact">
                 <div class="">
                     <div class="skillttl">Phone Number</div>
                     <div style="font-size:2rem">(+62) 82199366833</div>
                 </div>
-                <br/>
+                <br />
                 <div class="">
                     <div class="skillttl">Email</div>
                     <div style="font-size:1rem">ahmadfarid.gresik@gmail.com</div>
@@ -99,6 +133,18 @@
     </div>
 </body>
 <script>
+    var splide = new Splide( '.splide' ,{
+        perPage:2,
+        breakpoints: {
+            768:{
+                perPage:1
+            }
+        },
+        pagination : false,
+        arrows     : false,
+    });
+    splide.mount();
+    
     //window.scrollTo(0,0);
 
     $(".back").addClass("off");

@@ -11,6 +11,100 @@
     src: url(assets/font/Aharoni.ttf);
   }
 
+  a{
+    color: white;
+    cursor: pointer;
+    font-style: normal;
+  }
+
+.postx{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.postx > div{
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    transition: all ease-in-out 0.2s;
+
+}
+
+.postx > .x1{
+    transform: rotate(45deg);
+}
+
+.postx > .x2{
+    transform: rotate(-45deg);
+}
+
+
+.post{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    /* background-color: pink; */
+    backdrop-filter: blur(2px);
+    transition: all ease-in-out 0.4s;
+
+    
+}
+
+.postcontent{
+    background: #000;
+    color: white;
+    width: 60%;
+    margin: 30px;
+    padding: 30px;
+    position: absolute;
+    /* height: auto; */
+    transition: all ease-in-out 0.4s;
+    
+}
+.postselect {
+    width: 100%;
+}
+.postselect > img{
+    width: 100%;
+}
+
+.post.off{
+    backdrop-filter: blur(0px);
+    pointer-events: none;
+    
+}
+
+.post.off > .postcontent{
+    transform: translateX(-100%);
+    opacity: 0;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.post.off .x1{
+    transform: rotate(0deg);
+}
+.post.off .x2{
+    transform: rotate(0deg);
+}
+
 .cheat{
     display: none;
     position : fixed;
@@ -334,13 +428,22 @@ p{
 
 @media only screen and (max-width:768px){
 
+    .postcontent{
+        box-sizing: border-box;
+        margin: 0;
+        width: 100%;
+    }
+
+    .postselect > p{
+        font-size: 0.8rem;
+    }
+
 
 
     .bg{
         /* top:0; */
         width: 100%;
         position: absolute;
-        overflow: hidden;
         overflow: hidden;
         /* bottom: 5px; */
 

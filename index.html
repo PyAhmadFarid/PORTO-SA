@@ -26,6 +26,77 @@
             </div>
         </div>
     </div>
+
+    <div class="post off">
+
+        <div class="postcontent">
+            <div class="postx">
+                <div class="x1"></div>
+                <div class="x2"></div>
+            </div>
+            <div class="postselect everydo">
+                <h1>EVeryDo</h1>
+                <p>EveryDo adalah Aplikasi Mobile Mini Project yang kami kerjakan saat melakukan MSIB di PT. Andromedia.
+                    Aplikasi Ini adalah Aplikasi Todolist Yang dapat di share ke sesama penguna
+                </p>
+                <h2>Tampilan Design Mobile</h2>
+                <img src="/assets/images/projectimg/everydo1.png" alt="">
+                <h2>Tampilan Terllo</h2>
+                <img src="/assets/images/projectimg/everydo2.jpg" alt="">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>Jquery</li>
+                    <li>Tailwind</li>
+                    <li>Cordova</li>
+                </ul>
+                <h2>Link Github</h2>
+                <a href="https://github.com/PyAhmadFarid/EveryDo">EveryDo</a>
+
+            </div>
+            <div class="postselect erent">
+                <h1>eRent</h1>
+                <p>ERENT merupakan sebuah Aplikasi Persewaan Alat Elektronik yang didesign khusus untuk menunjang
+                    kebutuhan peralatan alat-alat elektronik kantoran seperti contohnya proyektor, laptop, dan lainnya.
+                    Kepada perusahaan yang sudah terdaftar dalam segala kemudahan yang terdapat pada aplikasi ERENT.</p>
+                <h2>Tampilan Mobile App</h2>
+                <img src="/assets/images/projectimg/erent1.jpg" alt="">
+                <h2>Tampilan Web App Admin</h2>
+                <img src="/assets/images/projectimg/erent2.jpg" alt="">
+                <img src="/assets/images/projectimg/erent2.jpg" alt="">
+                <h2>Teknologi Yang digunakan</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>Tailwind</li>
+                    <li>React Js</li>
+                    <li>Andro Base</li>
+                </ul>
+                <h2>Link Github</h2>
+                <a href="https://github.com/fadoilulmun-im/eRent">eRent</a>
+            </div>
+            <div class="postselect freelance">
+                <h1>Freelance</h1>
+                <p>Selama saya berkuliah saya terkadang mengerjakan project sampingan. ini adalah beberapa project yang saya kerjakan</p>
+                <h3>PPDB Sekolah</h3>
+                <img src="/assets/images/projectimg/free1.jpg" alt="">
+                <h3>PPDB Sekolah dan sistem pembayaran</h3>
+                <img src="/assets/images/projectimg/free2.jpg" alt="">
+                <h3>Aplikasi Pelinaian Toko</h3>
+                <img src="/assets/images/projectimg/free3.jpg" alt="">
+                <h2>Teknologi Yang digunakan</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>Tailwind</li>
+                    <li>Laravel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="char">
         <div class="blak off"></div>
         <img class="me" src="assets/images/ME.png" alt="">
@@ -82,37 +153,37 @@
             <div class="ctn off myproject">
                 <section class="splide" aria-label="Splide Basic HTML Example">
                     <div class="splide__track">
-                          <ul class="splide__list">
-                              <li class="splide__slide">
-                                <div class="projectitem">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="projectitem" post="everydo">
                                     <img src="assets/images/projectbg/1.jpg" alt="">
                                     <div class="projectitemcontent">
-                                        <span>Mobile Apps</span>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <span>EVeryDo</span>
+                                        <p>Aplikasi Share Todo list Mobile</p>
                                     </div>
                                 </div>
-                              </li>
-                              <li class="splide__slide">
-                                <div class="projectitem">
+                            </li>
+                            <li class="splide__slide">
+                                <div class="projectitem" post="erent">
                                     <img src="assets/images/projectbg/2.jpg" alt="">
                                     <div class="projectitemcontent">
-                                        <span>Web Apps</span>
-                                        <p> adipisicing elit. Modi magnam blanditiis voluptatibus, repellat dolores quibusdam ad</p>
+                                        <span>eRent</span>
+                                        <p>Aplikasi Peminjaman alat elektonik Mobile</p>
                                     </div>
                                 </div>
-                              </li>
-                              <li class="splide__slide">
-                                <div class="projectitem">
+                            </li>
+                            <li class="splide__slide">
+                                <div class="projectitem" post="freelance">
                                     <img src="assets/images/projectbg/3.jpg" alt="">
                                     <div class="projectitemcontent">
-                                        <span>Laravel</span>
-                                        <p>tibus, repellat dolores quibusdam ad</p>
+                                        <span>Freelance</span>
+                                        <p>Beberapa Aplikasi yang saya kerjakan saat freelance sebagai Web Developer</p>
                                     </div>
                                 </div>
-                              </li>
-                          </ul>
+                            </li>
+                        </ul>
                     </div>
-                  </section>
+                </section>
             </div>
             <div class="ctn off contact">
                 <div class="">
@@ -136,46 +207,71 @@
     </div>
 </body>
 <script>
+    function postShow() {
+        if ($(".post").hasClass("off")) {
+            $(".post").removeClass("off");
+        } else {
+            $(".post").addClass("off");
+        }
+    }
+
+    $(".post").on('click', () => {
+        let hov = $(".postcontent").is(":hover");
+        if (!hov) {
+            postShow();
+        }
+    })
+    $(".postx").on("click", function () {
+        postShow();
+    })
+    $(".projectitem").on("click", function () {
+        $(".postselect").hide();
+        let at = $(this);
+        //console.log(at.attr('post'));
+        $("." + $(this).attr("post")).show();
+        postShow();
+    })
 
     var keylog = '';
     const cheaytcode = 'hesoyam';
-    document.onkeypress =(e)=>{
-        
-        if(keylog.length < 10){
-            keylog+=e.key;
+    document.onkeypress = (e) => {
+
+        if (keylog.length < 10) {
+            keylog += e.key;
         }
-        else{
+        else {
             keylog = keylog.substring(1);
-            keylog+=e.key;
+            keylog += e.key;
         }
 
-        let cheat = keylog.substr(keylog.length-cheaytcode.length).toLowerCase();
-        if(cheat === cheaytcode){
+        let cheat = keylog.substr(keylog.length - cheaytcode.length).toLowerCase();
+        if (cheat === cheaytcode) {
             //alert("chead actifated");
+
             let a = new Audio("assets/cheat.mp3");
             a.play();
             $(".cheat").show();
-            setTimeout(()=>{
+            setTimeout(() => {
                 $(".cheat").hide();
-            },2000);
+            }, 2000);
         }
         //console.log(cheat);
 
     };
 </script>
 <script>
-    var splide = new Splide( '.splide' ,{
-        perPage:2,
+    var splide = new Splide('.splide', {
+        perPage: 2,
         breakpoints: {
-            768:{
-                perPage:1
+            768: {
+                perPage: 1
             }
         },
-        pagination : false,
-        arrows     : false,
+        pagination: false,
+        arrows: false,
     });
     splide.mount();
-    
+
     //window.scrollTo(0,0);
 
     $(".back").addClass("off");
